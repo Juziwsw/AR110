@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="34dp"
+    android:layout_height="34dp"
+    android:layout_marginStart="8dp"
+    android:background="@color/white_color">
+
+    <com.hiscene.imui.widget.NiceImageView
+        android:id="@+id/selected_contact_img_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_selected_cover"
+        app:border_color="@color/avatar_border_color"
+        app:border_width="@dimen/avatar_border_size"
+        app:corner_radius="@dimen/reference_corner_radius"
+        app:is_circle="true"
+        app:is_cover_src="true"
+        app:is_show_border="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:text_color="@color/avatar_text_color"
+        tools:ignore="contentDescription" />
+</LinearLayout>

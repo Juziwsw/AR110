@@ -1,0 +1,11 @@
+<resources>
+    <string name="label_message_yesterday">昨天</string>
+    <string name="label_message_before_yesterday">前天</string>
+    <string name="label_message_monday">星期一</string>
+    <string name="label_message_tuesday">星期二</string>
+    <string name="label_message_wednesday">星期三</string>
+    <string name="label_message_thursday">星期四</string>
+    <string name="label_message_friday">星期五</string>
+    <string name="label_message_saturday">星期六</string>
+    <string name="label_message_sunday">星期日</string>
+</resources>

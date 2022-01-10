@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D68DB"
+    >
+    <RelativeLayout
+        android:id="@+id/jd_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2D68DB"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_headline"
+            android:layout_width="match_parent"
+            android:layout_height="53dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_back"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_qbak" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/jingdan_patrollist_title"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_commu_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_below="@id/layout_headline"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/jd_devider_line"
+                android:layout_width="336dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/jd_devider_line" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/img_commu_icon"
+                    android:layout_width="17dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/text_commu_notice"
+                    android:src="@drawable/icon_mai_max" />
+
+                <TextView
+                    android:id="@+id/text_commu_notice"
+                    android:layout_width="126dp"
+                    android:layout_height="25dp"
+                    android:gravity="left|center_vertical"
+                    android:text="指挥中心通讯中"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_create_task"
+        android:layout_width="148dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/chujing_bg"
+        android:gravity="center"
+        android:text="开始巡逻"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="328dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:layout_marginBottom="16dp"
+        android:paddingTop="16dp"
+        app:layout_constraintBottom_toTopOf="@id/text_create_task"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jd_title_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

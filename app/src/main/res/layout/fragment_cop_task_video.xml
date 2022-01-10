@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D68DB"
+    >
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="53dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_back"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_qbak" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:text="@string/video_record"
+                android:layout_marginTop="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/img_upload"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_icon_cloud_defult"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_alignParentEnd="true"
+                android:clickable="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_commu_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_below="@id/title_bar"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/jd_devider_line"
+                android:layout_width="336dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/jd_devider_line" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                >
+
+                <TextView
+                    android:id="@+id/text_commu_notice"
+                    android:layout_width="126dp"
+                    android:layout_height="25dp"
+                    android:gravity="left|center_vertical"
+                    android:text="指挥中心通讯中"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/img_commu_icon"
+                    android:layout_width="17dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/text_commu_notice"
+                    android:src="@drawable/icon_mai_max" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <GridView
+        android:background="@drawable/round_coner_bg"
+        android:id="@+id/grid_view"
+        android:layout_centerHorizontal="true"
+        android:layout_width="328dp"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:verticalSpacing="8dp"
+        android:horizontalSpacing="2dp"
+        android:layout_below="@id/top_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        />
+
+</RelativeLayout>

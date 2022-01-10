@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SettingsFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#2D68DB"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layout_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="36dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:layout_marginStart="16dp"
+        >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_qbak" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_settings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        app:layout_constraintTop_toTopOf="@id/layout_back"
+        app:layout_constraintBottom_toBottomOf="@id/layout_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="@string/jingdan_list_user_info"
+        android:gravity="center"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="328dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="27dp"
+        android:background="@drawable/round_coner_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_back"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_settings"
+            android:background="@drawable/round_coner_bg"
+            android:layout_height="match_parent"
+            android:paddingBottom="14dp"
+            android:layout_width="328dp"
+           >
+
+            <TextView
+                android:id="@+id/text_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="22dp"
+                android:gravity="left|center_vertical"
+                android:text="账号"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/text_account_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:gravity="right|center_vertical"
+                android:textColor="#A2B0CC"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/text_account"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_account" />
+
+            <ImageView
+                android:id="@+id/img_devider_account"
+                android:layout_width="304dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/myinfo_devicer_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_account" />
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp"
+                android:gravity="left|center_vertical"
+                android:text="姓名"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_devider_account" />
+
+            <TextView
+                android:id="@+id/text_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:gravity="right|center_vertical"
+                android:textColor="#A2B0CC"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/text_name"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_name" />
+
+            <ImageView
+                android:id="@+id/img_devider_name"
+                android:layout_width="304dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/myinfo_devicer_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_name" />
+
+            <TextView
+                android:id="@+id/text_gps_locate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp"
+                android:gravity="left|center_vertical"
+                android:text="位置"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_devider_name" />
+
+            <TextView
+                android:id="@+id/text_gps_locate_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:gravity="right|center_vertical"
+                android:textColor="#A2B0CC"
+                android:textSize="12sp"
+                android:text="未定位"
+                app:layout_constraintBottom_toBottomOf="@id/text_gps_locate"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_gps_locate" />
+
+            <ImageView
+                android:id="@+id/img_devider_longitude"
+                android:layout_width="304dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/myinfo_devicer_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_gps_locate" />
+
+            <View
+                android:id="@+id/base_divider"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:background="#EAF1F9"
+                app:layout_constraintTop_toBottomOf="@id/img_devider_longitude" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_face_thresh"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                app:layout_constraintTop_toBottomOf="@id/base_divider"
+                >
+
+                <TextView
+                    android:id="@+id/text_face_thresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:gravity="left|center_vertical"
+                    android:text="人脸阈值"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_thresh_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_icon_set_into"
+                    app:layout_constraintBottom_toBottomOf="@id/text_face_thresh"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/text_face_thresh" />
+
+                <TextView
+                    android:id="@+id/text_face_thresh_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="left|center_vertical"
+                    android:text="90"
+                    android:textColor="#A2B0CC"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/text_face_thresh"
+                    app:layout_constraintRight_toLeftOf="@id/img_thresh_icon"
+                    app:layout_constraintTop_toTopOf="@id/text_face_thresh" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <ImageView
+                android:id="@+id/img_devider_thresh"
+                android:layout_width="304dp"
+                android:layout_height="1dp"
+                android:src="@drawable/myinfo_devicer_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_face_thresh" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_lpr_thresh"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                app:layout_constraintTop_toBottomOf="@id/img_devider_thresh"
+                >
+
+                <TextView
+                    android:id="@+id/text_lpr_thresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:gravity="left|center_vertical"
+                    android:text="车牌阈值"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_lpr_thresh_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_icon_set_into"
+                    app:layout_constraintBottom_toBottomOf="@id/text_lpr_thresh"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/text_lpr_thresh" />
+
+                <TextView
+                    android:id="@+id/text_lpr_thresh_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="left|center_vertical"
+                    android:text="90"
+                    android:textColor="#A2B0CC"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/text_lpr_thresh"
+                    app:layout_constraintRight_toLeftOf="@id/img_lpr_thresh_icon"
+                    app:layout_constraintTop_toTopOf="@id/text_lpr_thresh" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/img_lpr_devider_thresh"
+                android:layout_width="304dp"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:src="@drawable/myinfo_devicer_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_lpr_thresh" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_coptask_sound"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/img_lpr_devider_thresh"
+                >
+
+                <TextView
+                    android:id="@+id/text_coptask_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:gravity="left|center_vertical"
+                    android:text="出警声音提醒"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textStyle="bold"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_coptask_sound_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_icon_set_into"
+                    app:layout_constraintBottom_toBottomOf="@id/text_coptask_sound"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/text_coptask_sound" />
+
+                <TextView
+                    android:id="@+id/text_coptask_sound_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="left|center_vertical"
+                    android:text="全部人员"
+                    android:textColor="#A2B0CC"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/text_coptask_sound"
+                    app:layout_constraintRight_toLeftOf="@id/img_coptask_sound_icon"
+                    app:layout_constraintTop_toTopOf="@id/text_coptask_sound" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/img_devider_coptask"
+                android:layout_width="304dp"
+                android:layout_height="1dp"
+                android:src="@drawable/myinfo_devicer_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_lpr_thresh"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_patrol_sound"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                app:layout_constraintTop_toBottomOf="@id/img_devider_coptask"
+                >
+
+                <TextView
+                    android:id="@+id/text_patrol_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:gravity="left|center_vertical"
+                    android:text="巡逻声音提醒"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_patrol_sound_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_icon_set_into"
+                    app:layout_constraintBottom_toBottomOf="@id/text_patrol_sound"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/text_patrol_sound" />
+
+                <TextView
+                    android:id="@+id/text_patrol_sound_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="left|center_vertical"
+                    android:text="重点人员"
+                    android:textColor="#A2B0CC"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/text_patrol_sound"
+                    app:layout_constraintTop_toTopOf="@id/text_patrol_sound"
+                    app:layout_constraintRight_toLeftOf="@id/img_patrol_sound_icon"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/img_devider_patrol"
+                android:layout_width="304dp"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:src="@drawable/myinfo_devicer_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_patrol_sound"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_mobile_sound"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="@+id/img_devider_patrol"
+                app:layout_constraintStart_toStartOf="@+id/img_devider_patrol"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:visibility="gone"
+                android:background="@drawable/shap_setting_item"
+                app:layout_constraintTop_toBottomOf="@id/img_devider_patrol"
+                >
+
+                <TextView
+                    android:id="@+id/text_mobile_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="left|center_vertical"
+                    android:text="流动清查声音提醒"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_mobile_sound_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_icon_set_into"
+                    app:layout_constraintBottom_toBottomOf="@id/text_mobile_sound"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/text_mobile_sound" />
+
+                <TextView
+                    android:id="@+id/text_mobile_sound_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="left|center_vertical"
+                    android:text="全部人员"
+                    android:textColor="#A2B0CC"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/text_mobile_sound"
+                    app:layout_constraintTop_toTopOf="@id/text_mobile_sound"
+                    app:layout_constraintRight_toLeftOf="@id/img_mobile_sound_icon"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/img_cache_file"
+                android:layout_width="304dp"
+                android:layout_height="1dp"
+                android:src="@drawable/myinfo_devicer_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_patrol_sound"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_cache_file"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:background="@drawable/shap_setting_item"
+                app:layout_constraintTop_toBottomOf="@id/layout_mobile_sound"
+                >
+
+                <TextView
+                    android:id="@+id/text_cache_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/cache_file_set_title"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_cache_file_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_icon_set_into"
+                    app:layout_constraintBottom_toBottomOf="@id/text_cache_file"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/text_cache_file" />
+
+                <TextView
+                    android:id="@+id/text_cache_file_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="left|center_vertical"
+                    android:text="一天"
+                    android:textColor="#A2B0CC"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/text_cache_file"
+                    app:layout_constraintTop_toTopOf="@id/text_cache_file"
+                    app:layout_constraintRight_toLeftOf="@id/img_cache_file_icon"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/base_divider_version"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:background="#EAF1F9"
+                app:layout_constraintTop_toBottomOf="@id/layout_cache_file" />
+            <TextView
+                android:id="@+id/text_upload_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="left|center_vertical"
+                android:text="意见反馈"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="@id/text_version"
+                app:layout_constraintTop_toBottomOf="@id/base_divider_version" />
+
+            <ImageView
+                android:id="@+id/img_devider_upload_log"
+                android:layout_width="304dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/myinfo_devicer_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_upload_log" />
+
+            <TextView
+                android:id="@+id/text_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="left|center_vertical"
+                android:text="版本名"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="@id/text_account"
+                app:layout_constraintTop_toBottomOf="@id/img_devider_upload_log" />
+
+            <TextView
+                android:id="@+id/text_version_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:gravity="right|center_vertical"
+                android:textColor="#A2B0CC"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/text_version"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_version" />
+
+            <ImageView
+                android:id="@+id/img_devider_version"
+                android:layout_width="304dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/myinfo_devicer_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_version" />
+
+            <TextView
+                android:id="@+id/text_version_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="left|center_vertical"
+                android:text="版本号"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="@id/text_version"
+                app:layout_constraintTop_toBottomOf="@id/img_devider_version" />
+
+            <TextView
+                android:id="@+id/text_version_code_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:gravity="right|center_vertical"
+                android:textColor="#A2B0CC"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/text_version_code"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_version_code" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.hiar.ar110.widget.SoundSelConstraintLayout
+        android:id="@+id/layout_sound_set"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+    <com.hiar.ar110.widget.CacheFileSelLayout
+        android:id="@+id/layout_cache_file_set"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+    <com.hiar.ar110.widget.FaceThreshSelector
+        android:id="@+id/layout_face_thresh_set"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+    <com.hiar.ar110.widget.LPRThreshSelector
+        android:id="@+id/layout_lpr_thresh_set"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

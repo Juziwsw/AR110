@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    android:background="@drawable/round_coner_bg"
+    >
+
+    <TextView
+        android:id="@+id/text_people_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:gravity="left|top"
+        android:textIsSelectable="true"
+        android:clickable="true"
+        />
+
+
+    <ImageView
+        android:id="@+id/img_id_logo"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintLeft_toLeftOf="@id/text_people_name"
+        app:layout_constraintTop_toBottomOf="@id/text_people_name"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_id"
+        />
+
+    <TextView
+        android:id="@+id/text_idcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/img_id_logo"
+        app:layout_constraintTop_toTopOf="@id/img_id_logo"
+        app:layout_constraintBottom_toBottomOf="@id/img_id_logo"
+        android:layout_marginStart="4dp"
+        android:textSize="18sp"
+        android:textColor="#0C6DE8"
+        android:gravity="left|center_vertical"
+        android:textIsSelectable="true"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:id="@+id/text_tag_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/img_id_logo"
+        app:layout_constraintTop_toBottomOf="@id/img_id_logo"
+        android:layout_marginTop="6dp"
+        android:textSize="12sp"
+        android:textColor="#0C6DE8"
+        android:gravity="left|center_vertical"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:paddingRight="16dp"
+        android:textIsSelectable="true"
+        android:clickable="true"
+        />
+
+    <ImageView
+        android:id="@+id/img_lib_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="invisible"
+        />
+
+    <View
+        android:id="@+id/car_crop_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:background="@drawable/bottom_round_bg"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_peop_compare"
+        app:layout_constraintLeft_toLeftOf="@id/car_crop_bg"
+        app:layout_constraintTop_toTopOf="@id/car_crop_bg"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:background="@drawable/bottom_round_bg"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbarThumbHorizontal="@drawable/scrollbar_vertical_thumb"
+        android:scrollbarSize="3dp"
+        android:scrollbars="horizontal"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

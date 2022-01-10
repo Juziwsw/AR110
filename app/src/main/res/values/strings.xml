@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">AR融合指挥调度</string>
+    <string name="company_name">HiScene</string>
+
+    <string name="startlocation">Start Location</string>
+    <string name="stoplocation">Stop Location</string>
+
+    <string name="jd_title">Police Task</string>
+    <string name="jd_bjjl">Alarm record</string>
+    <string name="jd_position">Location Info</string>
+    <string name="jd_person">Alerter</string>
+    <string name="jd_gxr">Associated people</string>
+    <string name="login_error_notice">Hello, current application needs to be authorized by Zhejiang Police integrated platform, please contact the administrator to open it!</string>
+    <string name="unknown_error">unknown error</string>
+    <string name="click_five_times">Click five times to start ipset dialog</string>
+    <string name="record_video">Recording...</string>
+    <string name="start_record">Start Recording</string>
+    <string name="ip_input_error">ip addr input error!</string>
+    <string name="input_server_addr">input server address</string>
+    <string name="jingdan_list_title">Task List</string>
+    <string name="jingdan_list_personal_info">Settings</string>
+    <string name="jingdan_list_user_info">My Info</string>
+    <string name="jingdan_title">Task Info</string>
+    <string name="jingdan_patrollist_title">Patrol List</string>
+
+    <string name="patrol_title">Patrol Task</string>
+
+    <string name="calling_title">Command center is communicating</string>
+    <string name="vehicle_inspect_title">Vehicle Inspect</string>
+    <string name="people_inspect_title">People Inspect</string>
+    <string name="photo_inspect_title">Photo</string>
+
+    <string name="vehicle_has_recog">Recognized</string>
+    <string name="vehicle_not_recog">Unreognized</string>
+
+    <string name="next_item">Next</string>
+    <string name="last_item">Last</string>
+    <string name="jd_task_chujing">Police</string>
+    <string name="jd_task_complete">Complete Police</string>
+    <string name="jd_task_finished">Finished</string>
+    <string name="complete_cop_task">Do you want to complete this cop task ?</string>
+    <string name="complete_patrol_task">Do you want to complete this patrol task ?？</string>
+
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="video_record">Law enforcement record</string>
+    <string name="gxr_sfzh">Relation people \'s id</string>
+    <string name="photo_collect">Photo</string>
+    <string name="audio_collect">Audio</string>
+
+
+    <string name="title_server">服务器信息</string>
+    <string name="title_device">设备信息</string>
+    <string name="title_advanced">高级设置</string>
+
+    <string name="config_ed_hint_ip">Server IP</string>
+    <string name="config_ed_hint_port">Port</string>
+    <string name="config_ed_hint_realm">Realm</string>
+    <string name="config_ed_hint_user">AuthUser</string>
+    <string name="config_ed_hint_pass">PassWord</string>
+    <string name="config_ed_interval">Interval</string>
+    <string name="config_ed_expired">Expired</string>
+    <string name="config_ed_hint_device">Device ID</string>
+    <string name="config_ed_hint_sip">SIP ID</string>
+    <string name="config_btn_next">下一步</string>
+    <string name="config_btn_back">返回</string>
+    <string name="config_btn_connect">开始连接</string>
+    <string name="config_btn_advanced">高级选项</string>
+
+    <string name="toast_connect_success">连接成功</string>
+    <string name="toast_connect_failed">连接失败</string>
+    <string name="toast_params_empty">参数不能为空</string>
+    <string name="toast_get_push_config_failed">获取推流配置失败</string>
+    <string name="toast_warn">报警</string>
+    <string name="toast_alarm_received">已上报</string>
+    <string name="toast_offline">退出</string>
+    <string name="toast_connected">通话建立</string>
+    <string name="toast_disconnected">已挂断</string>
+    <string name="toast_warning_disconnect">离开出警页面，推流断开</string>
+
+    <string name="dialog_title">确定退出吗？</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_ensure">确认</string>
+    <string name="state_pushing">监控中</string>
+    <string name="file_upload_notice">正在上传文件</string>
+    <string name="progress_dialog_batch_upload">正在上传文件%s: %d / %d</string>
+    <string name="alarm_type_all">All</string>
+    <string name="alarm_type_important">Important</string>
+
+    // chat
+    <string name="send_msg">发送</string>
+    <string name="immediately_call">立即呼叫</string>
+    <string name="group_detail">详情</string>
+    <string name="group_member">群组成员</string>
+    <string name="group_member_selector">添加成员</string>
+    <string name="group_setting">群聊设置</string>
+    <string name="group_member_add">添加</string>
+    <string name="Search">搜索</string>
+    <string name="selected_count_confirm">确定(%1$s)</string>
+    <string name="label_call_other_cancelled">对方已取消</string>
+    <string name="label_call_other_unanswered">对方未接听</string>
+    <string name="label_call_other_rejected">对方已拒绝</string>
+    <string name="label_call_cancelled">已取消</string>
+    <string name="label_call_rejected">已拒绝</string>
+    <string name="label_call_unanswered">未接听</string>
+    <string name="label_call_time">通话时长%1$s</string>
+    <string name="recent_msg_list">消息列表</string>
+    <string name="create_group_members">Do you want to create a group chat</string>
+    <string name="cache_file_set_title">已上传视频保留时间</string>
+    <string name="cache_file_save_short_title">一天</string>
+    <string name="cache_file_save_def_title">五天</string>
+    <string name="cache_file_save_long_title">一个月</string>
+
+    <string name="network_offline">网络未连接</string>
+    <string name="network_host_unknown">当前网络不可用</string>
+    <string name="request_failed">网络异常，请重新尝试</string>
+    <string name="json_parse_failed">数据解析失败</string>
+    <string name="request_cancelled">请求被取消</string>
+    <string name="text_login">登录</string>
+    <string name="hint_input_account">请输入账号</string>
+    <string name="hint_input_password">请输入密码</string>
+</resources>

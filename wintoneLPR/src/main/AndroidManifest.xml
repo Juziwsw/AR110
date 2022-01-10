@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hiar.wintonelpr">
+
+    <application>
+        <service
+            android:name="com.kernal.plateid.AuthService"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="kernal.plateid.authservice" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.kernal.plateid.RecogService"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="kernal.plateid.recogService" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

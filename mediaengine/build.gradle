@@ -1,0 +1,61 @@
+apply plugin: 'com.android.library'
+
+File signPropertiesFile = file('../buildSystem/keystore.properties')
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+task makeJar(type: Copy) {
+    delete 'build/Hisence_MediaEngine_V1.1.jar' //删除之前的旧jar包
+    from('build/intermediates/bundles/default/') //从这个目录下取出默认jar包
+    into('build/outputs/') //将jar包输出到指定目录下
+    include('classes.jar')
+    rename('classes.jar', 'Hisence_MediaEngine_V1.1.jar') //自定义jar包的名字
+}
+makeJar.dependsOn(build)
+
+dependencies {
+    api fileTree(include: ['*.jar','*.aar'], dir: 'libs')
+    api "io.reactivex.rxjava2:rxjava:2.2.9"
+    api "io.reactivex.rxjava2:rxandroid:2.0.1"
+    api "com.jakewharton.rxrelay2:rxrelay:2.1.0"
+    api "com.google.protobuf:protobuf-java:3.4.0"
+    api "javax.inject:javax.inject:1"
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation project(path: ':mybaselib')
+    testImplementation "junit:junit:4.12"
+    implementation project(':usbCameraCommon')
+    implementation 'androidx.exifinterface:exifinterface:1.0.0'
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+
+

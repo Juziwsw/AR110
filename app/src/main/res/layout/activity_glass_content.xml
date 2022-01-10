@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/glass_second_layout"
+    android:layout_width="640dp"
+    android:layout_height="360dp"
+    android:background="#00000000"
+    android:layout_centerInParent="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_glass_content_show"
+        android:layout_width="470dp"
+        android:layout_height="216dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/mk_default_blue" >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_car_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/img_car_glass"
+                android:layout_width="260dp"
+                android:layout_height="142dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="33dp"
+                android:scaleType="fitXY"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_legal_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="@id/img_car_glass"
+                app:layout_constraintTop_toBottomOf="@id/img_car_glass"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                />
+
+            <TextView
+                android:id="@+id/text_driver_idcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@id/text_legal_name"
+                app:layout_constraintTop_toTopOf="@id/text_legal_name"
+                app:layout_constraintBottom_toBottomOf="@id/text_legal_name"
+                android:layout_marginStart="4dp"
+                />
+
+            <View
+                android:id="@+id/car_glass_outline"
+                android:layout_width="136dp"
+                android:layout_height="216dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_platenum_glass"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:gravity="center"
+                app:layout_constraintLeft_toLeftOf="@id/car_glass_outline"
+                app:layout_constraintRight_toRightOf="@id/car_glass_outline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/content_divider_line_glass"
+                android:layout_width="108dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/icon_line_normal"
+                app:layout_constraintLeft_toLeftOf="@id/car_glass_outline"
+                app:layout_constraintRight_toRightOf="@id/car_glass_outline"
+                app:layout_constraintTop_toBottomOf="@id/text_platenum_glass" />
+
+            <TextView
+                android:id="@+id/text_car_brand_glass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="@id/car_glass_outline"
+                app:layout_constraintRight_toRightOf="@id/car_glass_outline"
+                app:layout_constraintTop_toBottomOf="@id/content_divider_line_glass" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_glass_color_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:layout_constraintLeft_toLeftOf="@id/car_glass_outline"
+                app:layout_constraintRight_toRightOf="@id/car_glass_outline"
+                app:layout_constraintTop_toBottomOf="@id/text_car_brand_glass">
+
+                <TextView
+                    android:id="@+id/text_car_type_glass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="7sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_car_color_glass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/text_car_type_glass"
+                    app:layout_constraintLeft_toRightOf="@id/text_car_type_glass"
+                    app:layout_constraintTop_toTopOf="@id/text_car_type_glass" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/text_car_tag_glass"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="6dp"
+                android:textColor="#FF2612"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@id/content_divider_line_glass"
+                app:layout_constraintRight_toRightOf="@id/content_divider_line_glass"
+                app:layout_constraintTop_toBottomOf="@id/layout_glass_color_type" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/people_result_glass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+
+            <ImageView
+                android:id="@+id/glass_face_lib"
+                android:layout_width="100dp"
+                android:layout_height="142dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/glass_conf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:textColor="#21D82D"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/glass_face_lib"
+                app:layout_constraintLeft_toRightOf="@id/glass_face_lib"
+                app:layout_constraintTop_toTopOf="@id/glass_face_lib" />
+
+
+            <ImageView
+                android:id="@+id/glass_face_crop"
+                android:layout_width="100dp"
+                android:layout_height="142dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@id/glass_face_lib"
+                app:layout_constraintLeft_toRightOf="@id/glass_conf"
+                app:layout_constraintTop_toTopOf="@id/glass_face_lib" />
+
+            <TextView
+                android:id="@+id/glass_people_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/glass_text_color"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="@id/glass_face_lib"
+                app:layout_constraintTop_toBottomOf="@id/glass_face_lib" />
+
+            <TextView
+                android:id="@+id/glass_id_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="left|center_vertical"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/glass_text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/glass_people_name"
+                app:layout_constraintLeft_toRightOf="@id/glass_people_name"
+                app:layout_constraintTop_toTopOf="@id/glass_people_name" />
+
+            <View
+                android:id="@+id/people_glass_outline"
+                android:layout_width="136dp"
+                android:layout_height="216dp"
+                android:visibility="invisible"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/text_fatal_peo"
+                android:layout_width="40dp"
+                android:layout_height="14dp"
+                app:layout_constraintTop_toTopOf="@id/people_glass_outline"
+                app:layout_constraintLeft_toLeftOf="@id/people_glass_outline"
+                android:background="@color/red"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="5dp"
+                android:text="危险人员"
+                android:textSize="9sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:id="@+id/text_fatal_peonum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="10sp"
+                app:layout_constraintLeft_toRightOf="@id/text_fatal_peo"
+                app:layout_constraintBottom_toBottomOf="@id/text_fatal_peo"
+                app:layout_constraintTop_toTopOf="@id/text_fatal_peo"
+                android:layout_marginStart="2dp"
+                android:textColor="@color/white"
+                android:text="18"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:id="@+id/text_warning_peo"
+                android:layout_width="40dp"
+                android:layout_height="14dp"
+                app:layout_constraintTop_toTopOf="@id/text_fatal_peo"
+                app:layout_constraintBottom_toBottomOf="@id/text_fatal_peo"
+                app:layout_constraintLeft_toRightOf="@id/text_fatal_peonum"
+                android:layout_marginStart="6dp"
+                android:background="@color/yellow"
+                android:gravity="center"
+                android:text="重点人员"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:id="@+id/text_warning_peonum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="10sp"
+                app:layout_constraintLeft_toRightOf="@id/text_warning_peo"
+                app:layout_constraintBottom_toBottomOf="@id/text_warning_peo"
+                app:layout_constraintTop_toTopOf="@id/text_warning_peo"
+                android:layout_marginStart="2dp"
+                android:textColor="@color/white"
+                android:text="10"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:id="@+id/glass_important_peoname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/people_glass_outline"
+                app:layout_constraintRight_toRightOf="@id/people_glass_outline"
+                app:layout_constraintTop_toBottomOf="@id/text_fatal_peo"
+                android:layout_marginTop="4dp"
+                />
+
+            <TextView
+                android:id="@+id/glass_important_peoidcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="@id/people_glass_outline"
+                app:layout_constraintRight_toRightOf="@id/people_glass_outline"
+                app:layout_constraintTop_toBottomOf="@id/glass_important_peoname"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:id="@+id/divider_line_people"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                app:layout_constraintTop_toTopOf="@id/people_glass_outline"
+                app:layout_constraintBottom_toBottomOf="@id/people_glass_outline"
+                app:layout_constraintLeft_toLeftOf="@id/people_glass_outline"
+                app:layout_constraintRight_toRightOf="@id/people_glass_outline"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/car_normal_divider"
+                />
+
+            <TextView
+                android:id="@+id/glass_crime_type"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/red"
+                android:textSize="13sp"
+                android:paddingRight="8dp"
+                android:maxLines="4"
+                android:ellipsize="end"
+                app:layout_constraintLeft_toLeftOf="@id/people_glass_outline"
+                app:layout_constraintRight_toRightOf="@id/people_glass_outline"
+                app:layout_constraintTop_toBottomOf="@id/divider_line_people"
+                android:layout_marginTop="8dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/glass_bjd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            >
+
+            <View
+                android:id="@+id/bjr_glass_main_left_outline"
+                android:layout_width="330dp"
+                android:layout_height="222dp"
+                android:layout_marginLeft="3dp"
+                android:visibility="invisible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/glass_text_afdd"
+                android:layout_width="266dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ellipsize="start"
+                android:gravity="center"
+                android:maxLines="3"
+                android:textColor="@color/glass_text_color"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/bjr_glass_main_left_outline"
+                app:layout_constraintRight_toRightOf="@id/bjr_glass_main_left_outline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/bjd_info_glass_divider"
+                android:layout_width="274dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/icon_line_normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/glass_text_afdd" />
+
+            <TextView
+                android:id="@+id/glass_text_bjnr"
+                android:layout_width="274dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="5"
+                android:textColor="@color/glass_text_color"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/bjr_glass_main_left_outline"
+                app:layout_constraintRight_toRightOf="@id/bjr_glass_main_left_outline"
+                app:layout_constraintTop_toBottomOf="@id/bjd_info_glass_divider" />
+
+            <View
+                android:id="@+id/bjr_glass_outline"
+                android:layout_width="136dp"
+                android:layout_height="216dp"
+                android:visibility="invisible"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/glass_text_bjr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="96dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/glass_text_color"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/bjr_glass_outline"
+                app:layout_constraintRight_toRightOf="@id/bjr_glass_outline"
+                app:layout_constraintTop_toTopOf="@id/bjr_glass_outline" />
+
+            <TextView
+                android:id="@+id/glass_text_bjr_note"
+                android:layout_width="248dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#6FC7E9"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@id/bjr_glass_outline"
+                app:layout_constraintRight_toRightOf="@id/bjr_glass_outline"
+                app:layout_constraintTop_toBottomOf="@id/glass_text_bjr" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/img_pic_show_glass"
+            android:layout_width="309dp"
+            android:layout_height="171dp"
+            android:scaleType="fitXY"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_zhzx"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="70dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@id/layout_fuction_logo"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/img_mai_glass"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_mai_max"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_zhzx"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:gravity="left|center_vertical"
+            android:text="指挥中心"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_mai_glass"
+            app:layout_constraintLeft_toRightOf="@id/img_mai_glass"
+            app:layout_constraintTop_toTopOf="@id/img_mai_glass" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_glass_recordtime"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@id/layout_glass_content_show"
+        app:layout_constraintLeft_toLeftOf="@id/layout_glass_content_show"
+        app:layout_constraintRight_toRightOf="@id/layout_glass_content_show">
+
+        <ImageView
+            android:id="@+id/img_record_glass_note"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:src="@drawable/icon_tall_red"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/glass_text_recordtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:gravity="left|top"
+            android:textColor="@color/glass_text_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_record_glass_note"
+            app:layout_constraintLeft_toRightOf="@id/img_record_glass_note"
+            app:layout_constraintTop_toTopOf="@id/img_record_glass_note" />
+
+        <TextView
+            android:id="@+id/text_zhifa_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginStart="18dp"
+            android:gravity="left|top"
+            android:text="执法中..."
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/glass_text_recordtime"
+            app:layout_constraintLeft_toRightOf="@id/glass_text_recordtime"
+            app:layout_constraintTop_toTopOf="@id/glass_text_recordtime" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_glass_recordtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:constraint_referenced_ids="img_record_glass_note, glass_text_recordtime, text_zhifa_notice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_tag_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_fuction_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/layout_glass_recordtime"
+        app:layout_constraintLeft_toLeftOf="@id/layout_glass_content_show"
+        app:layout_constraintRight_toRightOf="@id/layout_glass_content_show">
+
+        <ImageView
+            android:id="@+id/icon_car_logo_glass"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_icon_car_id"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_photo_logo_glass"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_icon_photo_id"
+            app:layout_constraintLeft_toRightOf="@id/icon_car_logo_glass"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_face_recog"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_icon_face_id"
+            app:layout_constraintLeft_toRightOf="@id/icon_photo_logo_glass"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_recording"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_icon_movie"
+            app:layout_constraintLeft_toRightOf="@id/icon_face_recog"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

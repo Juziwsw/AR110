@@ -1,0 +1,16 @@
+<resources>
+    <declare-styleable name="FullscreenAttrs">
+        <attr name="fullscreenBackgroundColor" format="color" />
+        <attr name="fullscreenTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="contactSideBar">
+        <attr name="textColor" format="color|reference"/>
+        <attr name="side_backgroundColor" format="color|reference"/>
+        <attr name="chooseTextColor" format="color|reference"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="hintTextSize" format="dimension"/>
+        <attr name="item_radius" format="dimension"/>
+        <attr name="circleRadius" format="dimension"/>
+    </declare-styleable>
+</resources>

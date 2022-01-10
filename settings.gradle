@@ -1,0 +1,8 @@
+rootProject.name='AR110'
+include ':app', ':hisceneface', ':tagmodule'
+include ':mybaselib'
+include ':usbCameraCommon'
+include ':mediaengine'
+include ':imui'
+include ':wintoneLPR'
+include ':hisceneLPR'

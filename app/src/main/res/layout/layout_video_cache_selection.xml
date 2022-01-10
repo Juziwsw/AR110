@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/round_coner_bg">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="12dp"
+        android:textColor="#A2B0CC"
+        android:textSize="12sp"
+        android:text="@string/cache_file_set_title"
+        />
+
+    <ImageView
+        android:id="@+id/img_divider_short"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/myinfo_devicer_line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title" />
+    
+    <TextView
+        android:id="@+id/text_cache_file_short"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="@string/cache_file_save_short_title"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/img_divider_short"
+        android:clickable="true"
+        />
+
+    <ImageView
+        android:id="@+id/img_divider_def"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/myinfo_devicer_line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_cache_file_short" />
+
+    <TextView
+        android:id="@+id/text_cache_file_def"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="@string/cache_file_save_def_title"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/img_divider_def"
+        android:clickable="true"
+        />
+    <ImageView
+        android:id="@+id/img_divider_long"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/myinfo_devicer_line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_cache_file_def" />
+
+    <TextView
+        android:id="@+id/text_cache_file_long"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="@string/cache_file_save_long_title"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/img_divider_long"
+        android:clickable="true"
+        />
+
+    <View
+        android:id="@+id/base_divider_sound"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="#EAF1F9"
+        app:layout_constraintTop_toBottomOf="@id/text_cache_file_long" />
+
+
+    <TextView
+        android:id="@+id/text_cache_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:textColor="#0D67E5"
+        android:textSize="16sp"
+        android:text="取消"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/base_divider_sound"
+        android:clickable="true"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

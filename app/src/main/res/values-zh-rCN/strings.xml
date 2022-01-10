@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">AR融合指挥调度</string>
+    <string name="company_name">亮风台（上海）信息科技有限公司</string>
+    <string name="startlocation">开始定位</string>
+    <string name="stoplocation">停止定位</string>
+
+    <string name="jd_title">警单信息</string>
+    <string name="jd_bjjl">报警记录</string>
+    <string name="jd_position">位置信息</string>
+    <string name="jd_person">报警人信息</string>
+    <string name="jd_gxr">关系人信息</string>
+    <string name="login_error_notice">您好，当前应用需要到浙江公安警综平台进行授权，请联系管理员开通！</string>
+    <string name="unknown_error">未知错误</string>
+    <string name="click_five_times">连续点击了5次,启动IP设置界面</string>
+    <string name="ip_input_error">ip地址输入错误，请检查！</string>
+
+    <string name="record_video">录像中...</string>
+    <string name="start_record">开始录像</string>
+    <string name="input_server_addr">输入服务器地址</string>
+    <string name="jingdan_list_title">警单列表</string>
+    <string name="jingdan_patrollist_title">巡逻列表</string>
+    <string name="jingdan_list_personal_info">设置</string>
+    <string name="jingdan_list_user_info">我的</string>
+
+    <string name="patrol_title">巡逻任务</string>
+
+    <string name="jingdan_title">警单详情</string>
+    <string name="calling_title">指挥中心通讯中</string>
+    <string name="vehicle_inspect_title">车辆核查</string>
+    <string name="people_inspect_title">人员核查</string>
+    <string name="photo_inspect_title">照片采集</string>
+
+    <string name="vehicle_has_recog">已识别</string>
+    <string name="vehicle_not_recog">未识别</string>
+
+    <string name="next_item">下一条</string>
+    <string name="last_item">上一条</string>
+
+    <string name="jd_task_chujing">立即出警</string>
+    <string name="jd_task_complete">完成处理</string>
+    <string name="jd_task_finished">已完成</string>
+    <string name="complete_cop_task">确定完成本次处警吗？</string>
+    <string name="complete_patrol_task">确定完成本次巡逻吗？</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="video_record">执法记录</string>
+    <string name="gxr_sfzh">关系人身份证:</string>
+    <string name="photo_collect">图片采集</string>
+    <string name="audio_collect">音频采集</string>
+
+    <string name="title_server">服务器信息</string>
+    <string name="title_device">设备信息</string>
+    <string name="title_advanced">高级设置</string>
+
+    <string name="config_ed_hint_ip">Server IP</string>
+    <string name="config_ed_hint_port">Port</string>
+    <string name="config_ed_hint_realm">Realm</string>
+    <string name="config_ed_hint_user">AuthUser</string>
+    <string name="config_ed_hint_pass">PassWord</string>
+    <string name="config_ed_interval">Interval</string>
+    <string name="config_ed_expired">Expired</string>
+    <string name="config_ed_hint_device">Device ID</string>
+    <string name="config_ed_hint_sip">SIP ID</string>
+    <string name="config_btn_next">下一步</string>
+    <string name="config_btn_back">返回</string>
+    <string name="config_btn_connect">开始连接</string>
+    <string name="config_btn_advanced">高级选项</string>
+
+    <string name="toast_connect_success">连接成功</string>
+    <string name="toast_connect_failed">连接失败</string>
+    <string name="toast_params_empty">参数不能为空</string>
+    <string name="toast_get_push_config_failed">获取推流配置失败</string>
+    <string name="toast_warn">报警</string>
+    <string name="toast_alarm_received">已上报</string>
+    <string name="toast_offline">退出</string>
+    <string name="toast_connected">通话建立</string>
+    <string name="toast_disconnected">已挂断</string>
+    <string name="toast_warning_disconnect">离开出警页面，推流断开</string>
+
+    <string name="dialog_title">确定退出吗？</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_ensure">确认</string>
+    <string name="state_pushing">监控中</string>
+    <string name="file_upload_notice">正在上传文件</string>
+    <string name="progress_dialog_batch_upload">正在上传文件%s: %d / %d</string>
+
+    <string name="alarm_type_all">全部人员</string>
+    <string name="alarm_type_important">重要人员</string>
+
+    // chat
+    <string name="send_msg">发送</string>
+    <string name="immediately_call">立即呼叫</string>
+    <string name="group_detail">详情</string>
+    <string name="group_member">群组成员</string>
+    <string name="group_setting">群聊设置</string>
+    <string name="group_member_add">添加</string>
+    <string name="Search">搜索</string>
+    <string name="group_member_selector">添加成员</string>
+    <string name="selected_count_confirm">确定(%1$s)</string>
+    <string name="label_call_other_cancelled">对方已取消</string>
+    <string name="label_call_other_unanswered">对方未接听</string>
+    <string name="label_call_other_rejected">对方已拒绝</string>
+    <string name="label_call_cancelled">已取消</string>
+    <string name="label_call_rejected">已拒绝</string>
+    <string name="label_call_unanswered">未接听</string>
+    <string name="label_call_time">通话时长%1$s</string>
+    <string name="recent_msg_list">消息列表</string>
+    <string name="create_group_members">是否创建群聊?</string>
+    <string name="text_login">登录</string>
+    <string name="hint_input_account">请输入账号</string>
+    <string name="hint_input_password">请输入密码</string>
+</resources>

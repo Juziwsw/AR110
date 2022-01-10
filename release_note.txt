@@ -1,0 +1,11 @@
+该版本主要用来测试在警务通上，通过pstore-sdk-pstore-2.5.8-release.jar到pstore平台进行登录获取accessTocken。
+在警务通上获取位置信息，用户信息。通过Http访问内网服务器。
+
+1. AR110_V1.0.1.18_2020_08_25:
+   （1）针对北仑版本的引擎，提供新的CloudRtcLibrary-release.aar
+   （2）在菜单界面，按三次功能键启动捕获logcat的界面。如果不按logcat，上传hileia 日志文件
+   
+2. 昭通城管在master分支添加登录界面
+    
+	
+   

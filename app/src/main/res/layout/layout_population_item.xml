@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/jd_item_bg"
+    android:id="@+id/layout_patrol_base"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <TextView
+        android:id="@+id/text_task_number"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="@dimen/jd_item_vspace"
+        android:layout_marginLeft="@dimen/jd_head_start"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        android:text="任务编号:"
+        android:gravity="left|center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/text_task_number_val"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toTopOf="@id/text_task_number"
+        app:layout_constraintBottom_toBottomOf="@id/text_task_number"
+        app:layout_constraintLeft_toRightOf="@id/text_task_number"
+        android:layout_marginStart="4dp"
+        android:textSize="14sp"
+        android:textColor="#4582ff"
+        android:gravity="left|center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/text_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="@dimen/jd_item_vspace"
+        app:layout_constraintTop_toBottomOf="@id/text_task_number"
+        app:layout_constraintLeft_toLeftOf="@id/text_task_number"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        android:text="开始时间:"
+        android:gravity="left|center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/text_start_time_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/text_start_time"
+        app:layout_constraintBottom_toBottomOf="@id/text_start_time"
+        app:layout_constraintLeft_toRightOf="@id/text_start_time"
+        android:layout_marginStart="4dp"
+        android:textSize="14sp"
+        android:textColor="#4582ff"
+        android:text="2019080725"
+        android:gravity="left|center_vertical"
+        />
+
+    <ImageView
+        android:id="@+id/img_status"
+        android:scaleType="centerInside"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_start_time"
+        app:layout_constraintBottom_toBottomOf="@id/text_start_time"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/bq_home_completed"
+        />
+
+
+    <TextView
+        android:id="@+id/text_endtime"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/text_start_time"
+        app:layout_constraintLeft_toLeftOf="@id/text_task_number"
+        android:layout_marginTop="@dimen/jd_item_vspace"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        android:text="结束时间:"
+        android:gravity="left|center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/jd_item_vspace"
+        />
+
+    <TextView
+        android:id="@+id/text_endtime_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/text_endtime"
+        app:layout_constraintBottom_toBottomOf="@id/text_endtime"
+        app:layout_constraintLeft_toRightOf="@id/text_endtime"
+        android:layout_marginStart="4dp"
+        android:textSize="14sp"
+        android:textColor="#4582ff"
+        android:text="2019080725"
+        android:gravity="left|center_vertical"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_text_receive"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/item_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/lib_gray_color_level_3"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+
+        <com.hiscene.imui.widget.NiceImageView
+            android:id="@+id/chat_item_header"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:border_color="@color/avatar_border_color"
+            app:border_width="@dimen/avatar_border_size"
+            app:corner_radius="@dimen/reference_corner_radius"
+            app:is_circle="true"
+            app:is_cover_src="true"
+            app:is_show_border="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/default_portrait" />
+
+        <RelativeLayout
+            android:id="@+id/chat_item_layout_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/chat_item_header"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <com.hiscene.imui.widget.BubbleImageView
+                android:id="@+id/bivPic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                app:angle="6dp"
+                app:arrowHeight="8dp"
+                app:arrowLocation="left"
+                app:arrowPosition="15dp"
+                app:arrowWidth="5dp" />
+
+            <ImageView
+                android:id="@+id/ivPlay"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_video_start"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

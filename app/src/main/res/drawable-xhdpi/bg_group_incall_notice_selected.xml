@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Style for "rectangle_2" -->
+    <!-- Add this snippet to layer-list xml in drawable. -->
+    <item android:width="275dp" android:height="40dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gray_color_level_1" />
+            <corners android:radius="32dp" />
+            <item android:name="android:shadowColor">#66a8adba</item>
+            <item android:name="android:shadowDx">0</item>
+            <item android:name="android:shadowDy">4</item>
+        </shape>
+    </item>
+</selector>
+

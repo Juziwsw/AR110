@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.JQDisplayActivity"
+    android:background="#000000"
+    android:id="@+id/root_layout"
+    >
+
+    <RelativeLayout
+        android:id="@+id/detail_base"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_marginBottom="57dp"
+        android:layout_centerVertical="true">
+
+        <Button
+            android:id="@+id/btn_bjjl"
+            android:layout_width="160dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:text="@string/jd_bjjl"
+            android:background="@color/black"
+            />
+
+        <Button
+            android:id="@+id/btn_person"
+            android:layout_width="160dp"
+            android:layout_height="32dp"
+            android:layout_below="@id/btn_bjjl"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:text="@string/jd_person"
+            android:background="@color/black"
+            />
+
+        <Button
+            android:id="@+id/btn_position"
+            android:layout_width="160dp"
+            android:layout_height="32dp"
+            android:layout_below="@id/btn_person"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:text="@string/jd_position"
+            android:background="@color/black"
+            />
+
+        <Button
+            android:id="@+id/btn_gxr"
+            android:layout_width="160dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:layout_below="@id/btn_position"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:text="@string/jd_gxr"
+            android:background="@color/black"
+            />
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/detail_divider"
+        android:layout_width="2dp"
+        android:layout_height="285dp"
+        android:background="#2c2d30"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/detail_base"/>
+
+
+    <RelativeLayout
+        android:id="@+id/right_layout"
+        android:layout_width="438dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/detail_divider"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentRight="true"
+        >
+
+        <RelativeLayout
+            android:id="@+id/jq_contrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/track_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:text="报警记录 1/5"
+                />
+
+            <ImageView
+                android:id="@+id/track_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/personnel_left"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/track_title"
+                android:clickable="true"
+                />
+
+            <ImageView
+                android:id="@+id/track_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/personnel_right"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/track_title"
+                android:clickable="true"
+                />
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/detail_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/jq_contrl"
+            android:fadeScrollbars="false"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+            android:scrollbarSize="4dp"
+            android:scrollbars="vertical"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="avatar_text_color">#ffffffff</color>
+    <color name="avatar_border_color">#ffCBE4FF</color>
+    <color name="lib_gray_color_level_0">#f4f4f4</color>
+    <color name="lib_gray_color_level_1">#dddddd</color>
+    <color name="lib_gray_color_level_2">#bbbbbb</color>
+    <color name="lib_gray_color_level_3">#999999</color>
+    <color name="lib_gray_color_level_4">#666666</color>
+    <color name="lib_color_primary_dark">#4D68D5</color>
+    <color name="lib_blue_color_level_0">#3191D8</color>
+    <color name="white_color">#ffffff</color>
+</resources>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D68DB"
+    >
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <RelativeLayout
+                android:id="@+id/layout_back"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_qbak" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:text="@string/audio_collect"
+                android:layout_marginTop="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/img_upload"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_icon_cloud_defult"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_alignParentEnd="true"
+                android:clickable="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_commu_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_below="@id/title_bar"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/jd_devider_line"
+                android:layout_width="336dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/jd_devider_line" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                >
+
+                <TextView
+                    android:id="@+id/text_commu_notice"
+                    android:layout_width="126dp"
+                    android:layout_height="25dp"
+                    android:gravity="left|center_vertical"
+                    android:text="指挥中心通讯中"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/img_commu_icon"
+                    android:layout_width="17dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/text_commu_notice"
+                    android:src="@drawable/icon_mai_max" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_audio_play"
+        android:layout_width="328dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_coner_bg"
+        android:clickable="true"
+        >
+
+        <TextView
+            android:id="@+id/no_play_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/GRAY"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="选择音频文件开始播放"
+            />
+
+        <TextView
+            android:id="@+id/audio_play_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:gravity="left|center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/audio_cap_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/audio_play_title"
+            app:layout_constraintTop_toTopOf="@id/audio_play_title"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="32dp"
+            android:textColor="#B7BBC4"
+            android:textSize="12sp"
+            android:gravity="right|center_vertical"
+            />
+
+        <SeekBar
+            android:id="@+id/audio_play_seekbar"
+            android:layout_width="278dp"
+            android:layout_height="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/audio_play_title"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:progress="0"
+            android:splitTrack="false"
+            />
+
+        <TextView
+            android:id="@+id/text_play_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/audio_play_title"
+            app:layout_constraintTop_toBottomOf="@id/audio_play_seekbar"
+            android:layout_marginTop="-2dp"
+            android:textColor="#999999"
+            android:textSize="10sp"
+            android:gravity="left|center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/text_audio_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/audio_play_seekbar"
+            app:layout_constraintTop_toTopOf="@id/text_play_start"
+            app:layout_constraintBottom_toBottomOf="@id/text_play_start"
+            android:layout_marginEnd="10dp"
+            android:textColor="#999999"
+            android:textSize="10sp"
+            android:gravity="right|center_vertical"
+            />
+
+        <ImageView
+            android:id="@+id/img_play_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_icon_audioplay_pause"
+            android:clickable="true"
+            android:visibility="invisible"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@drawable/round_coner_bg"
+        android:id="@+id/audio_recyclerview"
+        android:layout_centerHorizontal="true"
+        android:layout_width="328dp"
+        android:layout_height="match_parent"
+        android:numColumns="1"
+        android:layout_below="@id/top_layout"
+        android:layout_above="@id/layout_audio_play"
+        android:layout_marginBottom="4dp"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="outsideOverlay"
+        />
+
+</RelativeLayout>
